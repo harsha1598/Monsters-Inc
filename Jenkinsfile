@@ -1,10 +1,20 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'node:16.17.1-alpine' } }
+    agent any
+    stage('clean up') {
+            steps {
+                deleteDir()
+            }
+        }
     stages {
         stage('build') {
             steps {
                 sh 'node --version'
+            }
+        }
+        stage('Complete') {
+            steps {
+                echo "SUCCESS"
             }
         }
     }

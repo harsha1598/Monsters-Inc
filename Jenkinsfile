@@ -1,12 +1,13 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
     agent any
-    stage('clean up') {
+    
+    stages {
+        stage('clean up') {
             steps {
                 deleteDir()
             }
         }
-    stages {
         stage('build') {
             steps {
                 sh 'node --version'

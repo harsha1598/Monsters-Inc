@@ -15,7 +15,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                echo "deployed"
+                echo "deployed edited"
             }
         }
         stage('Complete') {

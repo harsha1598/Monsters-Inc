@@ -13,6 +13,11 @@ pipeline {
                 echo "build step"
             }
         }
+        stage('deploy') {
+            steps {
+                echo "deployed"
+            }
+        }
         stage('Complete') {
             steps {
                 echo "SUCCESS"

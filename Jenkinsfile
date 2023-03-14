@@ -10,7 +10,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'node --version'
+                echo "build step"
             }
         }
         stage('Complete') {
